@@ -7,6 +7,7 @@
 namespace esphome {
 namespace ssd1680_epaper {
 
+// VERSION 2 - with deferred init
 class SSD1680EPaper : public display::DisplayBuffer,
                       public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW,
                                            spi::CLOCK_PHASE_LEADING, spi::DATA_RATE_4MHZ> {
@@ -29,9 +30,10 @@ class SSD1680EPaper : public display::DisplayBuffer,
 
   void init_display_();
   void hw_reset_();
-  void wait_until_idle_(uint32_t timeout_ms = 1000);
+  void wait_until_idle_();
   void command_(uint8_t cmd);
   void data_(uint8_t data);
+  void send_data_(const uint8_t *data, size_t len);
   void full_update_();
   void display_frame_();
 
