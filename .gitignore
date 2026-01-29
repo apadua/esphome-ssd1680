@@ -1,41 +1,28 @@
-# Prerequisites
-*.d
+# Secrets
+secrets.yaml
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# ESPHome build artifacts
+.esphome/
+.pioenvs/
+.piolibdeps/
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
 *.so
-*.dylib
-*.dll
 
-# Fortran module files
-*.mod
-*.smod
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# OS
+.DS_Store
+Thumbs.db
 
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+# Logs
+*.log
