@@ -19,6 +19,8 @@ A custom ESPHome component for SSD1680-based e-paper displays, specifically deve
   - Driver: SSD1680Z
   - ESP32-S3 based
 
+- [Adafruit MagTag (2025 Edition)](https://www.adafruit.com/magtag)
+
 ### Should Work (Untested)
 - Other 2.9" SSD1680-based e-paper displays
 - Good Display GDEW029T5
@@ -37,6 +39,12 @@ external_components:
       url: https://github.com/apadua/esphome-ssd1680
       ref: main
     components: [ssd1680_epaper]
+```
+
+For the Adafruit MagTag use this line:
+
+```yaml
+    components: [magtag2025_epaper]
 ```
 
 ### Manual Installation
